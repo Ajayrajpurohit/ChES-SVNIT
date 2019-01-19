@@ -1,0 +1,32 @@
+/*---- Color Schme ----*/
+/* Baby Powder = "#FDFFFC"
+	Max Blue Green = "#2EC4B6"
+	Rose Madder = "#E71D36"
+	Bright Yellow = "#FF9F1C"
+	Maastricht Blue ="#011627"*/
+
+/*---- Body -----*/
+li:hover{
+	background: #2EC4B6;
+}
+li > a{
+	font-size: 16px;
+}
+
+/*---- Header ----*/
+.navbar2 {
+	font-size: 20px;
+	background: #FDFFFC;
+	border: 1px grey solid;
+}
+
+
+
+
+
+
+/*---- Main -----*/
+
+
+/*---- Footer ----*/
+

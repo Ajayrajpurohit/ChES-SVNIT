@@ -1,0 +1,60 @@
+
+<style>
+		/*---- Color Schme ----*/
+/* Baby Powder = "#FDFFFC"
+	Max Blue Green = "#2EC4B6"
+	Rose Madder = "#E71D36"
+	Bright Yellow = "#FF9F1C"
+	Maastricht Blue ="#011627"*/
+
+		span > a{
+			text-decoration: none;
+			color: #E71D36;
+		}
+		
+	li > a{
+		text-decoration: none;
+		color: #FDFFFC;
+	}
+	img {
+		padding: 5px;
+	}
+		
+	</style>
+<footer>
+	
+	<div class="row" style="background: #011627; padding-top: 10px;">
+		<div class="col-md-2"><img src="../../che/includes/AIChE.JPG"><p>AIChE Affliated.</p></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-4">
+			<span style="color: #FDFFFC;">Be in horizon!</span>
+			<p style="font-size: 2em;">
+			<span><a href="https://www.linkedin.com/company/chemical-engineering-society-svnit/" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+			<span><a href="https://www.facebook.com/SVNITChemEngSoc/" target="_blank"><i class="fab fa-facebook"></i></a></span>
+			<span><a href="https://www.instagram.com/ches_svnit/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+			<span><a href="https://www.youtube.com/channel/UCdRZ6R7sBns_mx-nNixWyfg" target="_blank"><i class="fab fa-youtube"></i></a></span>
+			</p>
+			<span style="color: #FDFFFC;">&copy; Copyrights reserved 2018-19</span>
+		</div>
+		<div class="col-md-1"></div>
+		<div class="col-md-4">
+			<span style="color: #FDFFFC;">Quick Links</span>
+			<ul style="list-style: none;">
+				<?php 
+				if(!isset($_SESSION['id'])){
+				echo'
+				<li><a href="login.php">Login</a></li>
+				<li><a href="/register.php">SignUp</a></li>';}
+					else{echo'<li><a href="about.php">Team</a></li>
+				<li><a href="article/index.php">Articles</a></li>';}?>
+				<li><a href="quiz.php">Quiz</a></li>
+				<li><a href="contact.php">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
+<?php 
+ob_end_flush(); 
+?>

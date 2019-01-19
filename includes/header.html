@@ -1,0 +1,91 @@
+<?php
+ob_start();
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Ajay Rajpurohit">
+        <meta name="description" content="Chemical Engineering Society is a student based club in SVNIT having affliation with American Institute of Chemical Engineers">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, PHP">
+        
+        <!--Bootstrap files-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+				<link rel="stylesheet" href="css/style.css">
+		   	<link rel="icon" type="text/css" href="http://ches.in/includes/icon.ico">
+				<script src="js/script.js"></script>
+				<title><?php echo $p_title; ?></title>
+		 <style>
+			ul#nav-head > li:hover{
+				background: #2EC4B6;
+			 }
+			 .navbar {
+				font:  bold 16px Arial, sans-serif;
+				background: #FDFFFC;
+			 }
+
+		 </style>
+    </head>
+    <body>
+        <header>
+        		<nav class="navbar navbar-default" id="#myNavbar">
+							<div class="container-fluid">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>                        
+									</button>
+									<div style="display: inline;">
+									<a class="navbar-brand" href="/index.php"><img src="http://ches.in/includes/icon.png" style="position: absolute; top: 2px; left: 2px; height: 50px; width: 50px;"></a>
+										&nbsp;&nbsp;&nbsp;
+									<a href="http://svnit.ac.in"><img src="http://ches.in/includes/svnit.png" style="position: relative; height: 55px; width: 60px;"></a>
+ 									ChES - NIT, Surat									
+									</div>
+								</div>
+								<div class="collapse navbar-collapse" id="myNavbar">
+									<ul class="nav navbar-nav" id="nav-head">
+										<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+									 <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Siphon
+        								 <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+         									 <li><a href="/siphon4.php">Siphon 4.0</a></li>
+          									 
+               									</ul></li>
+<!--
+									    <li><a href="/siphon3.php">Siphon</a></li>
+										<li><a href="/siphon.php">Chemanic</a></li>
+-->									<li><a href="/quiz.php">Quiz!</a></li>
+										<li><a href="/event.php">Events</a></li>
+										<li><a href="/article/index.php">Articles</a></li>
+										<li><a href="/contact.php">Contact</a></li>
+										<li><a href="/about.php">About</a></li>
+									</ul>
+									<?php
+									echo'<form class="nav navbar-nav navbar-right">
+										<div class="btn-group" style="margin-top: 08px;">';
+										
+											
+											
+											if(isset($_SESSION['id'])){
+												//echo'<button class="btn btn-default">';
+												echo'<a class="btn btn-default" href="/dash.php" target="_parent"><span class="glyphicon glyphicon-user"></span></a>';
+												//echo'<button class="btn btn-default">';
+												echo'<a class="btn btn-default" href="/logout.php" target="_blank"><span class="glyphicon glyphicon-log-out"></span></a>';
+											}
+										
+									echo'</form>';
+										?>
+								</div>
+							</div>
+						</nav>
+        </header>
+       
+        
